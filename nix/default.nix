@@ -10,7 +10,13 @@ let
     # the good known version of setuptools for zc.buildout
     python3 = pkgs.python3.override {
       packageOverrides = self: super: {
-        zc_buildout_nix = super.zc_buildout_nix.overridePythonAttrs(old: {
+        zc_buildout_nix = super.zc_buildout_nix.overridePythonAttrs(old: rec {
+          pname = "zc.buildout";
+          version = "2.13.7";
+          src = self.fetchPypi {
+            inherit pname version;
+            sha256 = "sha256-4S/jrfLmD1LamMjbRjBoi5TLGq1GayxqSm4P5A6o+Uo=";
+          };
           postInstall = null;
         });
         bootstrapped-pip = self.callPackage ./pkgs/bootstrapped-pip {
