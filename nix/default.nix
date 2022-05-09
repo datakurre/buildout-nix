@@ -10,6 +10,9 @@ let
     # the good known version of setuptools for zc.buildout
     python3 = pkgs.python3.override {
       packageOverrides = self: super: {
+        zc_buildout_nix = super.zc_buildout_nix.overridePythonAttrs(old: {
+          postInstall = null;
+        });
         bootstrapped-pip = self.callPackage ./pkgs/bootstrapped-pip {
           inherit (self)
           setuptools;
