@@ -13,6 +13,7 @@ mkShell {
       pillow
       setuptools
       # AND
+      tox
       zc_buildout_nix
     ]))
     pcre
