@@ -18,6 +18,10 @@ let
             sha256 = "sha256-4S/jrfLmD1LamMjbRjBoi5TLGq1GayxqSm4P5A6o+Uo=";
           };
           postInstall = null;
+          postPatch = ''
+            # https://github.com/buildout/buildout/commit/2b6995c675bce0b5db12088d26dc7ea6e4b177b3
+            substituteInPlace src/zc/buildout/buildout.py --replace "'38', '39'" "'38', '39', '310'"
+          '';
         });
         bootstrapped-pip = self.callPackage ./pkgs/bootstrapped-pip {
           inherit (self)
