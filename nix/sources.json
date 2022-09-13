@@ -11,16 +11,16 @@
         "url": "https://github.com/nmattia/niv/archive/82e5cd1ad3c387863f0545d7591512e76ab0fc41.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "nixpkgs-21.11": {
-        "branch": "release-21.11",
+    "nixpkgs-22.05": {
+        "branch": "release-22.05",
         "description": "Nix Packages collection",
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "ad667404474314806d8071eec4c8ec0db95c17e4",
-        "sha256": "0594hq60zgv6170vkq6z4i4qp4mly5269mwc6jj9p94m2rqfdfbw",
+        "rev": "ccafeb2aff99ec505d35fcfafd212c424c5359fd",
+        "sha256": "0q9kxp7n7394f8s7nqm8852gmwka0xn973q2vf3qh5qrwkv441qj",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/ad667404474314806d8071eec4c8ec0db95c17e4.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/ccafeb2aff99ec505d35fcfafd212c424c5359fd.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs-unstable": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "65401d1b9fcc6f327b1c6b661fe99bb81b024b0b",
-        "sha256": "1smsajd62wk25b5bk46m5hrl4g89995dzcq74jbliz5man4svra9",
+        "rev": "a3fe3bbd687052ee1c505af1003f127325569ed9",
+        "sha256": "0srgcmf3x09wlk31sz7qbsarazkb33g4g83c6626cf3hixj7dri0",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/65401d1b9fcc6f327b1c6b661fe99bb81b024b0b.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/a3fe3bbd687052ee1c505af1003f127325569ed9.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
