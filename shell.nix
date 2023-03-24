@@ -6,7 +6,7 @@ with pkgs;
 mkShell {
   buildInputs = [
     black
-    (python3.withPackages(ps: with ps; [
+    (python2.withPackages(ps: with ps; [
       # Packages that need to come from nixpkgs
       cryptography
       lxml

@@ -8,14 +8,14 @@ let
   overlay = _: pkgs: {
     # Patch Python distribution to base on setuptools 51.3.3, which is
     # the good known version of setuptools for zc.buildout
-    python3 = pkgs.python3.override {
+    python2 = pkgs.python2.override {
       packageOverrides = self: super: {
         zc_buildout_nix = super.zc_buildout_nix.overridePythonAttrs(old: rec {
           pname = "zc.buildout";
-          version = "2.13.7";
+          version = "2.13.8";
           src = self.fetchPypi {
             inherit pname version;
-            sha256 = "sha256-4S/jrfLmD1LamMjbRjBoi5TLGq1GayxqSm4P5A6o+Uo=";
+            sha256 = "sha256-Q6sVaHFc6DmaPZmvu3araOsoDhv7xk8a0ZR61LIQxhU=";
           };
           postInstall = null;
         });
@@ -42,11 +42,11 @@ let
         # override required to avoid conflicting paths
         pytestCheckHook = super.pytestCheckHook.override { pytest = self.pytest; };
         # Plone pins
-        cryptography = self.callPackage ./pkgs/cryptography {
-          inherit (super)
-          buildPythonPackage
-          Security;
-        };
+#       cryptography = self.callPackage ./pkgs/cryptography {
+#         inherit (super)
+#         buildPythonPackage
+#         Security;
+#       };
       };
     };
   };
